@@ -13,6 +13,31 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Fix
 * Edited default operations to close the window when the JFrame is closed at Step 2.
 
+# Module 6: Ticket 602 - Use neutral colors
+
+## Test steps
+1. Build and run CiCo.
+2. Enter 12345678 into the field and select the whole number.
+3. Replace the number with 00000000 and click Update.
+4. Wait 11 seconds.
+5. Enter 00000000 again and click Update.
+6. Wait 11 seconds.
+7. Enter 99999999 and click Update.
+8. Click OK.
+9. Enter 99999999 again, click Update, and wait 11 seconds.
+10. Click the X to close the window.
+
+## Expected results
+* The main, status, and error panels should use a light gray background with dark text.
+* The input field should be white. The buttons and selected text background should be gray.
+* The text, selected number, and blinking cursor should be easy to see.
+* The status panel should display "Developer" and either "Checked IN" or "Checked OUT" after step 3.
+* The status should switch to the opposite value after step 5.
+* The main panel should return with an empty field after steps 4, 6, 8, and 9.
+* The error panel should display "Please show your card to staff to validate." after step 7.
+* The version number should stay visible in white on a dark gray footer.
+* The application should stop and display "Clean shutdown" in the console after step 10.
+
 
 
 
